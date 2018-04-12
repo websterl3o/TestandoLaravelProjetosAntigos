@@ -74,7 +74,7 @@
 
 
 
-	<div class="container-fluid mt-5 mb-5">
+	<div class="container-fluid pt-5 pb-5">
 		<div class="row flex-xl-nowrap justify-content-center">
 			@yield('content')
 		</div>
@@ -82,6 +82,35 @@
 </body>
 <script src="/JQuery/jquery-3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+	function slidestart(){
+		$(".carousel-item").removeClass('active');
+		$(".carousel-item").addClass('active');
+
+		var img = $('.carousel-inner img');
+		var carrousel = $('.carousel-item');
+		var a = "";
+
+		for (var i = 0; i < img.length; i++) {
+			if(a == ""){
+				console.log("iniciou");
+				a = img[i].height;
+				console.log("'a' recebeu "+img[i].height);
+				console.log(img[i]);
+			}
+			else if(a > img[i].height){
+				console.log("mudou");
+				a = img[i].height;
+				console.log("'a' recebeu "+img[i].height);
+				console.log(img[i]);
+			}
+			if(i + 1 == i < img.length){
+				$(".carousel-item").removeClass('active');
+				$(carrousel[0]).addClass('active');
+			}
+		}
+
+		return a;
+	}
 	$(()=>{
 		var nav = $('.nav-container');
 
@@ -93,10 +122,10 @@
 			}
 		});
 
-		$("div#carouselExampleControls img").css("max-height", $( window ).height());
+		$("div#carouselExampleControls img").css("height", slidestart());
 		$("div#carouselExampleControls .filtro-bolinha").css("height", $("#carouselExampleControls").height());
-
 	});
+		
 	// $(window).load(function() {
 	// 	var imagens = $('.carousel-inner img');
 	// 	var aux = 0;
@@ -104,6 +133,14 @@
 	// 		console.log($(imagens[i]).height());
 	// 	}
 	// });
+	// $('.carousel').carousel('next', function() {
+	// 		var imagens = $('.carousel-inner img');
+	// 		for (var i = 0; i < imagens.length; i++) {
+	// 			if(imagens[i].hasClass('active')){
+	// 				console.log(imagens[i]);
+	// 			}	
+	// 		}
+	// 	});
 	
 </script>
 </html>
