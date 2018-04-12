@@ -38,8 +38,8 @@ li.nav-item a:focus {
 	outline: none;
 }
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light{
-	background: hsla(208, 7%, 46%, 0.86) !important;
+nav.navbar.navbar-expand-lg.navbar-light{
+	background: hsla(0, 0%, 62%, 0.33);
 }
 
 /* Menu fixo ao topo INICIO*/
@@ -48,8 +48,12 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
 }
 
 .f-nav{ 
-	z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;
-	/* background: hsla(208, 7%, 46%, 0.86) !important; */
+	z-index: 9999; 
+	position: fixed; 
+	left: 0; 
+	top: 0; 
+	width: 100%;
+	background: hsla(0, 0%, 55%, 0.76) !important;
 }/* this make our menu fixed top */
 
 .nav { 
@@ -98,7 +102,7 @@ div#carouselExampleControls img {
     filter: grayscale(100%);
 }
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light.nav-container{
+nav.navbar.navbar-expand-lg.navbar-light.nav-container{
 	z-index: 9999;
 	position: fixed;
 	left: 0;

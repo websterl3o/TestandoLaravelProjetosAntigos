@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light nav-container">
+	<nav class="navbar navbar-expand-lg navbar-light nav-container">
 		<a class="navbar-brand a-logo" href="#">
 			<img class="logo" src="https://www.shareicon.net/data/512x512/2015/08/10/83207_paris_512x512.png" >
 		</a>
