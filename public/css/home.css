@@ -1,4 +1,20 @@
+@media (max-width: 992px){
+	.li-logo{
+		display: none;
+	}
+}
+
+@media (min-width: 992px){
+	.a-logo{
+		display: none;	
+	}
+}
+
 .menu{
+	margin: 0 auto;
+}
+
+.menu-content{
     flex-direction: column!important;
 }
 
@@ -6,22 +22,94 @@ ul.navbar-nav{
 	align-items: center;
 }
 
-li.nav-item {
+li.nav-item a {
     padding: 15px;
     font-size: 12pt;    
-}
-.logo{
-	width: 180px;
-	height: auto;
+    color: #fff !important;
 }
 
-@media (max-width: 992px){
-	.li-logo{
-		display: none;
-	}
+li.nav-item a:hover {
+    text-decoration: none;
+    font-size: 13pt;
+    background-color: transparent;
 }
-@media (min-width: 992px){
-	.a-logo{
-		display: none;	
-	}
+
+li.nav-item a:focus {
+	outline: none;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+	background: hsla(208, 7%, 46%, 0.86) !important;
+}
+
+/* Menu fixo ao topo INICIO*/
+.nav-container{ 
+	background: url('images/nav_bg.jpg') repeat-x 0 0;
+}
+
+.f-nav{ 
+	z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;
+	/* background: hsla(208, 7%, 46%, 0.86) !important; */
+}/* this make our menu fixed top */
+
+.nav { 
+	height: 42px;
+}
+
+.nav ul { 
+	list-style: none; 
+}
+
+.nav ul li{
+	float: left;
+	margin-top: 6px;
+	padding: 6px;
+	border-right: 1px solid #ACACAC;
+}
+
+.nav ul li:first-child{ 
+	padding-left: 0;
+}
+
+.nav ul li a:hover{ 
+	text-decoration: underline;
+}
+
+/* Menu fixo ao topo FIM*/
+
+/* Short Menu INICIO*/
+
+.logo{
+	width: 120px;
+	height: auto;
+	filter: brightness(0) invert(1);
+}
+
+.f-nav ul li img.logo {
+    width: 60px;
+}
+
+/* Short Menu FIM*/
+
+div#carouselExampleControls img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.nav-container{
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.filtro-bolinha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url(/img/bg-texture-00.svg);
 }
