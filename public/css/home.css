@@ -10,6 +10,15 @@
 	}
 }
 
+@media (max-width: 575.98px) {
+	.logo {
+    	width: 40px !important;
+	}
+}
+body{
+	    background: #8e8e8e;
+}
+
 .menu{
 	margin: 0 auto;
 }

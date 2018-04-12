@@ -50,13 +50,13 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block" src="/img/4766ea9e813b8a97e83ff73c71d1c503.png" alt="First slide">
+				<img class="d-block img-fluid" src="/img/4766ea9e813b8a97e83ff73c71d1c503.png" alt="First slide">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block" src="/img/The-Louvre-In-Paris-hd-wallpapers-for-mobile-55685728.jpg" alt="Second slide">
+				<img class="d-block img-fluid" src="/img/The-Louvre-In-Paris-hd-wallpapers-for-mobile-55685728.jpg" alt="Second slide">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block" src="/img/thumb-1920-467022.jpg" alt="Third slide">
+				<img class="d-block img-fluid" src="/img/thumb-1920-467022.jpg" alt="Third slide">
 			</div>
 		</div>
 		<div class="filtro-bolinha"></div>
@@ -75,7 +75,9 @@
 
 
 	<div class="container-fluid mt-5 mb-5">
-		@yield('content')
+		<div class="row flex-xl-nowrap justify-content-center">
+			@yield('content')
+		</div>
 	</div>
 </body>
 <script src="/JQuery/jquery-3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -90,8 +92,18 @@
 				nav.removeClass("f-nav");
 			}
 		});
+
 		$("div#carouselExampleControls img").css("max-height", $( window ).height());
-		$("div#carouselExampleControls .filtro-bolinha").css("height", $( window ).height());
+		$("div#carouselExampleControls .filtro-bolinha").css("height", $("#carouselExampleControls").height());
+
 	});
+	// $(window).load(function() {
+	// 	var imagens = $('.carousel-inner img');
+	// 	var aux = 0;
+	// 	for (var i = 0; i < $('.carousel-inner img').length; i++) {
+	// 		console.log($(imagens[i]).height());
+	// 	}
+	// });
+	
 </script>
 </html>
